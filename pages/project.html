@@ -8,7 +8,8 @@
     referrerpolicy="no-referrer"/>
     <meta name="author" content="Boudou Romain">
     <script src="../data/projects.js"></script>
-    <link href="./css/header.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
+    <link href="../css/project.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -66,11 +67,9 @@
         <script src="../data/projects.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // Récupérer l'ID du projet dans l'URL
         const params = new URLSearchParams(window.location.search);
         const projectId = params.get("id");
 
-        // Trouver le projet correspondant
         const project = projects.find(proj => proj.id === projectId);
 
         if (!project) {
@@ -78,19 +77,16 @@
             return;
         }
 
-        // Mise à jour des éléments principaux
         document.title = `Romain Boudou | ${project.title}`;
         document.querySelector(".portfolio-top h2").textContent = project.title;
         document.querySelector(".portfolio-top .content-placeholder img").src = project.image;
         document.querySelector(".portfolio-top .content-placeholder img").alt = project.title;
 
-        // Section "About"
         document.querySelector(".details-project .categorie:nth-child(1)").innerHTML = `
             <h3>About</h3>
-            <p>${project.detailedDescription || "No detailed description available."}</p>
+            <p>${project.description || "No detailed description available."}</p>
         `;
 
-        // Section "Project Info"
         document.querySelector(".details-project .categorie:nth-child(2)").innerHTML = `
             <h3>Project Info</h3>
             <ul>
@@ -100,11 +96,9 @@
             </ul>
         `;
 
-        // Section "Description"
         const descriptionSection = document.querySelector(".part");
         descriptionSection.querySelector("p").textContent = project.detailedDescription || "No additional description available.";
 
-        // Section "Photos"
         const photosContainer = descriptionSection.querySelector(".photos-projets");
         if (project.photos && project.photos.length > 0) {
             photosContainer.innerHTML = project.photos

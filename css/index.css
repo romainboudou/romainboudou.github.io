@@ -56,10 +56,46 @@ button{
     cursor: pointer;
 }
 
-.categorie{
-    align-items: flex-start;
+#categories-container{
     position: relative;
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 32px;
+}
+
+.categorie{
+    background-color: #232323;
+    border: none;
+    text-align: left;
+    color: #fff;
+    display: inline-block;
+    padding: 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: calc(30% - 16px);
+    margin: 8px;
+    line-height: 1.44;
+    text-align: center;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+body {
+    max-width: 1168px;
+    margin: 0 auto;
 }
