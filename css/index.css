@@ -1,0 +1,65 @@
+main {
+    --scroll-y: 0px;
+}
+
+.about-information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16vh;
+    padding-top: 24px;
+}
+
+.about-information .profile-image{
+    margin-bottom: 0;
+    margin-right: 48px;
+    border: 4px solid #C3B1E1;
+    width: 248px;
+    border-radius: 50%;
+    filter: grayscale(30%);
+}
+
+.about-information .about-text{
+    font-weight: 300;
+    font-size: 2rem;
+    color: #c3b1e1;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 16px 0;
+    font-weight: 700;
+    color: #f8f3a6;
+}
+
+.badge-list{
+    padding: 8px 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.badge-list .badge{
+    font-size: 1.125rem;
+    font-weight: 500;
+    list-style: none;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #C3B1E1;
+    color: #C3B1E1;
+    white-space: nowrap;
+    margin: 0 4px 16px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.categorie{
+    align-items: flex-start;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 32px;
+}

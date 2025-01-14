@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <meta name="author" content="Boudou Romain">
+    <script src="../data/projects.js"></script>
+    <link href="./css/header.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="../index.html">Romain Boudou</a>
+            <small> Student Game Developer</small>
+        </h1>
+        <div class="links">
+            <a class="link" title="Itch.io" href="https://gros-lynx.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+            <a class="link" title="LinkedIn" href="https://www.linkedin.com/in/romain-boudou-b99977234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="link" title="GitHub" href="https://github.com/romainboudou" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class="link-resume" title="Resume" href="">Resume</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="portfolio-top">
+            <div class="content-placeholder">
+                <img>
+            </div>
+            <h2>The Nine Winds</h2>
+        </div>
+        <div class="details-project">
+            <section class="categorie">
+                <h3>About</h3>
+                fzguuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuurerf
+            </section>
+            <section class="categorie">
+                <h3>Project Info</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-people-group"></i>
+                        1
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        1 weeks
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        Unity
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="part">
+            <h3>Description</h3>
+            <p>efzgurbnieogjegegge</p>
+            <h3>Photos</h3>
+            <div class="photos-projets">
+                <img>
+                <img>
+            </div>
+        </div>
+        <script src="../data/projects.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Récupérer l'ID du projet dans l'URL
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("id");
+
+        // Trouver le projet correspondant
+        const project = projects.find(proj => proj.id === projectId);
+
+        if (!project) {
+            document.querySelector("main").innerHTML = "<h2>Project not found</h2>";
+            return;
+        }
+
+        // Mise à jour des éléments principaux
+        document.title = `Romain Boudou | ${project.title}`;
+        document.querySelector(".portfolio-top h2").textContent = project.title;
+        document.querySelector(".portfolio-top .content-placeholder img").src = project.image;
+        document.querySelector(".portfolio-top .content-placeholder img").alt = project.title;
+
+        // Section "About"
+        document.querySelector(".details-project .categorie:nth-child(1)").innerHTML = `
+            <h3>About</h3>
+            <p>${project.detailedDescription || "No detailed description available."}</p>
+        `;
+
+        // Section "Project Info"
+        document.querySelector(".details-project .categorie:nth-child(2)").innerHTML = `
+            <h3>Project Info</h3>
+            <ul>
+                <li><i class="fa-solid fa-people-group"></i> ${project.teamSize}</li>
+                <li><i class="fa-solid fa-clock"></i> ${project.time}</li>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i> ${project.tools}</li>
+            </ul>
+        `;
+
+        // Section "Description"
+        const descriptionSection = document.querySelector(".part");
+        descriptionSection.querySelector("p").textContent = project.detailedDescription || "No additional description available.";
+
+        // Section "Photos"
+        const photosContainer = descriptionSection.querySelector(".photos-projets");
+        if (project.photos && project.photos.length > 0) {
+            photosContainer.innerHTML = project.photos
+                .map(photo => `<img src="${photo}" alt="Photo of ${project.title}">`)
+                .join("");
+        } else {
+            photosContainer.innerHTML = "<p>No photos available for this project.</p>";
+        }
+    });
+</script>
+
+    </main>
+</body>
+</html>

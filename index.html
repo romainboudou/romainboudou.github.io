@@ -8,14 +8,31 @@
     referrerpolicy="no-referrer"/>
     <meta name="author" content="Boudou Romain">
     <title>Romain Boudou | Student Game Developer - Portfolio</title>
+    <script src="./data/categories.js"></script>
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>
+            <a href="#/" class="link-title">Romain Boudou</a>
+            <small> Student Game Developer</small>
+        </h1>
+        <div class="links">
+            <a class="link" title="Itch.io" href="https://gros-lynx.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+            <a class="link" title="LinkedIn" href="https://www.linkedin.com/in/romain-boudou-b99977234/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="link" title="GitHub" href="https://github.com/romainboudou" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a class="link-resume" title="Resume" href="">Resume</a>
+        </div>
+    </header>
 
     <main>
-        <p class="about-text">
-            BLAegfzhzrfgrae
-        </p>
+        <div class="about-information">
+            <img class="profile-image" src="./profil.jpg" alt="Picture of me">
+            <p class="about-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat leo eget ultricies laoreet. Nam quis arcu a tortor malesuada facilisis non sit amet dui. Sed sed posuere mauris. Praesent fringilla a neque eget vulputate. Sed nec dignissim elit. Nunc ut purus quis risus porttitor finibus ac vitae turpis. Phasellus ac volutpat nisl. Aenean volutpat elit at dignissim tincidunt. Aenean ipsum libero, interdum vulputate elementum sed, rutrum eget nisl. Etiam in nisi in elit semper consectetur vitae in magna.
+            </p>
+        </div>
         <h2>Technical Experience</h2>
         <ul class="badge-list">
             <li class="badge">Unreal Engine</li>
@@ -32,7 +49,7 @@
             <li class="badge">PHP</li>
         </ul>
         <h2>Project Categories</h2>
-        <button type="button" class="categorie">
+        <!--<button type="button" class="categorie" onclick="window.location.href ='./pages/game-programming.html'">
             <section>
                 <h3>
                     Game Programming
@@ -45,7 +62,30 @@
                     Web Programming
                 </h3>
             </section>
-        </button>
+        </button>-->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const categoriesContainer = document.createElement("div");
+                categoriesContainer.id = "categories-container";
+
+                categories.forEach(category => {
+                    const button = document.createElement("button");
+                    button.className = "categorie";
+                    button.type = "button";
+                    button.onclick = () => (window.location.href = category.link);
+
+                    button.innerHTML = `
+                        <section>
+                            <h3>${category.name}</h3>
+                        </section>
+                    `;
+
+                    categoriesContainer.appendChild(button);
+                });
+
+                document.querySelector("main").appendChild(categoriesContainer);
+            });
+        </script>
     </main>
 </body>
 </html>
