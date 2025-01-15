@@ -10,6 +10,7 @@
     <script src="../data/projects.js"></script>
     <link href="../css/header.css" rel="stylesheet">
     <link href="../css/project.css" rel="stylesheet">
+    <link rel="icon" href="../img/profil.jpg" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -35,7 +36,6 @@
         <div class="details-project">
             <section class="categorie">
                 <h3>About</h3>
-                fzguuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuurerf
             </section>
             <section class="categorie">
                 <h3>Project Info</h3>
@@ -57,7 +57,7 @@
         </div>
         <div class="part">
             <h3>Description</h3>
-            <p>efzgurbnieogjegegge</p>
+            <p></p>
             <h3>Photos</h3>
             <div class="photos-projets">
                 <img>
@@ -97,7 +97,7 @@
         `;
 
         const descriptionSection = document.querySelector(".part");
-        descriptionSection.querySelector("p").textContent = project.detailedDescription || "No additional description available.";
+        descriptionSection.querySelector("p").innerHTML = project.detailedDescription || "No additional description available.";
 
         const photosContainer = descriptionSection.querySelector(".photos-projets");
         if (project.photos && project.photos.length > 0) {

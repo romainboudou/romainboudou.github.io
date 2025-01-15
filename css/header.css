@@ -25,7 +25,19 @@ header {
 a{
     background-color: transparent;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+h1 a:visited {
+    color: inherit;
 }
 
 h1{

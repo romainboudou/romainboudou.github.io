@@ -38,8 +38,8 @@ section {
 }
 
 .portfolio-top h2{
-    margin-bottom: -74px;
-    top: -72px;
+    margin-bottom: -100px;
+    top: -100px;
     font-size: 2rem;
     position: relative;
     padding: 16px;
@@ -99,25 +99,28 @@ p {
 
 .photos-projets {
     display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
-    gap: 16px; /* Espace entre les photos (plus propre que margin individuel) */
-    justify-content: flex-start; /* Aligne les photos au début (ou center si centré est voulu) */
-    width: 100%; /* Permet d'utiliser toute la largeur disponible */
+    flex-wrap: wrap;
+    gap: 16px; 
+    justify-content: flex-start; 
+    width: 100%; 
 }
 
 .photos-projets img {
-    width: calc(50% - 8px); /* Chaque image prend 50% de largeur moins l'espace entre */
-    max-width: 100%; /* S'assure que les images ne débordent pas */
-    height: auto; /* Garde les proportions */
-    border-radius: 8px; /* Ajoute une bordure arrondie si nécessaire */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Petit effet d'ombre */
+    width: calc(50% - 8px); 
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Centrer la dernière photo seule sur sa ligne */
 .photos-projets img:last-child {
-    width: calc(50% - 8px); /* Largeur pleine si seule */
-    align-self: center; /* Centre verticalement si nécessaire */
-    justify-self: center; /* Centre horizontalement */
-    margin-left: auto; /* Ajoute de l'espace automatiquement à gauche */
-    margin-right: auto; /* Ajoute de l'espace automatiquement à droite */
+    width: calc(50% - 8px); 
+    align-self: center;
+    justify-self: center; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+h4 {
+    color: #C3B1E1;
 }
