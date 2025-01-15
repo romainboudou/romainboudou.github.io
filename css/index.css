@@ -78,6 +78,10 @@ button{
     text-align: center;
 }
 
+.categorie:hover {
+    background-color: #333333;
+}
+
 button, select {
     text-transform: none;
 }

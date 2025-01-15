@@ -50,11 +50,12 @@ section {
     line-height: 1.44;
 }
 
-.project-card-image{
+.project-card-image {
     position: relative;
     margin-left: -24px;
     margin-top: -24px;
     width: calc(100% + 48px);
+    height: 350px;
     display: inline-flex;
     background-color: #252525;
     border-top-left-radius: 4px;
@@ -62,8 +63,10 @@ section {
     overflow: hidden;
 }
 
-img {
+.project-card-image img {
     width: 100%;
+    height: 100%; /* Remplit le conteneur en hauteur */
+    object-fit: cover; /* Maintient les proportions et remplit le conteneur */
 }
 
 .image-additional-info{
