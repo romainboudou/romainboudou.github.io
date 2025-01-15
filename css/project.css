@@ -96,3 +96,28 @@ section {
 p {
     margin: 16px 0;
 }
+
+.photos-projets {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    gap: 16px; /* Espace entre les photos (plus propre que margin individuel) */
+    justify-content: flex-start; /* Aligne les photos au début (ou center si centré est voulu) */
+    width: 100%; /* Permet d'utiliser toute la largeur disponible */
+}
+
+.photos-projets img {
+    width: calc(50% - 8px); /* Chaque image prend 50% de largeur moins l'espace entre */
+    max-width: 100%; /* S'assure que les images ne débordent pas */
+    height: auto; /* Garde les proportions */
+    border-radius: 8px; /* Ajoute une bordure arrondie si nécessaire */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Petit effet d'ombre */
+}
+
+/* Centrer la dernière photo seule sur sa ligne */
+.photos-projets img:last-child {
+    width: calc(50% - 8px); /* Largeur pleine si seule */
+    align-self: center; /* Centre verticalement si nécessaire */
+    justify-self: center; /* Centre horizontalement */
+    margin-left: auto; /* Ajoute de l'espace automatiquement à gauche */
+    margin-right: auto; /* Ajoute de l'espace automatiquement à droite */
+}
