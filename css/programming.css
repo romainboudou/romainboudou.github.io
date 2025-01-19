@@ -48,6 +48,11 @@ section {
     padding: 24px;
     border-radius: 4px;
     line-height: 1.44;
+    cursor : pointer;
+}
+
+.project-card:hover {
+    background-color: #333333;
 }
 
 .project-card-image {

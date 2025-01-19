@@ -51,6 +51,7 @@ const projects = [
         category: "game-programming",
         image: "../img/quoridor-thumbnail.png",
         photos: [
+            "../img/quoridor-thumbnail.png",
             "../img/quoridor-1.png",
             "../img/quoridor-2.png",
             "../img/quoridor-3.png",
@@ -71,6 +72,7 @@ const projects = [
         category: "game-programming",
         image: "../img/cuisine-thumbnail.png",
         photos: [
+            "../img/cuisine-thumbnail.png",
             "../img/cuisine-1.png",
             "../img/cuisine-2.png",
             "../img/cuisine-3.png"
@@ -89,6 +91,7 @@ const projects = [
         category: "game-programming",
         image: "../img/prototype-plateformer-thumbnail.png",
         photos: [
+            "../img/prototype-plateformer-thumbnail.png",
             "../img/prototype-plateformer-1.png",
             "../img/prototype-plateformer-2.png"
         ],
@@ -106,6 +109,7 @@ const projects = [
         category: "game-programming",
         image: "../img/cardinal-chains-thumbnail.png",
         photos: [
+            "../img/cardinal-chains-thumbnail.png",
             "../img/cardinal-chains-1.png",
             "../img/cardinal-chains-2.png"
         ],
@@ -122,6 +126,9 @@ const projects = [
         tools: "C++",
         category: "game-programming",
         image: "../img/laying-grass-thumbnail.png",
+        photos: [
+            "../img/laying-grass-thumbnail.png",
+        ],
         link: "./project.html?id=laying-grass",
     },
     {
@@ -135,6 +142,9 @@ const projects = [
         tools: "C++ / SFML",
         category: "game-programming",
         image: "../img/chess-thumbnail.png",
+        photos: [
+            "../img/chess-thumbnail.png",
+        ],
         link: "./project.html?id=chess",
     },
     {
@@ -149,6 +159,7 @@ const projects = [
         category: "web-programming",
         image: "../img/dessin-creations-thumbnail.png",
         photos: [
+            "../img/dessin-creations-thumbnail.png",
             "../img/dessin-creations-1.png",
             "../img/dessin-creations-2.png"
         ],
@@ -166,6 +177,7 @@ const projects = [
         category: "web-programming",
         image: "../img/cherrybee-design-thumbnail.png",
         photos: [
+            "../img/cherrybee-design-thumbnail.png",
             "../img/cherrybee-design-1.png",
             "../img/cherrybee-design-2.png",
             "../img/cherrybee-design-3.png"
