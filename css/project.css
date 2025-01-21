@@ -127,3 +127,9 @@ p {
 h4 {
     color: #C3B1E1;
 }
+
+@media (max-width: 768px) {
+    p {
+        text-align: center;
+    }
+}

@@ -82,3 +82,9 @@ h1 small {
     margin-right: 0;
     margin-left: 16px;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+}
