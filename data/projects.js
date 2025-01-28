@@ -55,8 +55,7 @@ const projects = [
             "../img/quoridor-1.png",
             "../img/quoridor-2.png",
             "../img/quoridor-3.png",
-            "../img/quoridor-4.png",
-            "../img/quoridor-5.png"
+            "../img/quoridor-4.png"
         ],
         link: "./project.html?id=quoridor",
     },
