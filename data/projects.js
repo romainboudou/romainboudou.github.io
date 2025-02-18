@@ -60,6 +60,27 @@ const projects = [
         link: "./project.html?id=quoridor",
     },
     {
+        id: "over-drive",
+        title: "Over Drive",
+        date: "2025",
+        description: "Small funfair game with several attractions (Chamboule Tout and Bumper Car) and NPCs who wander around or steal your money, developed in 1 week.",
+        detailedDescription: "<p>Following a Blueprint course on Unreal Engine 5, I had to create a party game where we can make an Upset and Bumper Cars. In the funfair we had to find NPCs who greet us as we pass and another who steals our money as soon as he sees us.</p><p>Here are some details about each attraction and feature...</p><h4>Chamboule-Tout</h4><ul><li>UI with viewfinder, shot power gauge.</li><li>After 3 shots the cans return to their place.</li><li>Change camera to first person.</li><li>Checking the number of cans dropped, if you are more than halfway through you win 1 coin and if you spill everything you win 2 coins.</li></ul><h4>Bumper Car</h4><ul><li>Change of camera, player to vehicle.</li><li>Vehicle physics to lightly bounce against others.</li><li>The goal is to take out all the vehicles to win the game before the end of the timer.</li><li>Random color of the bumper cars each game.</li><li>Changed player controls.</li></ul><h4>NPCs</h4><ul><li>AI that moves to a NavMesh and Target Points on the ground.</li><li>3 types of TargetPoints (\"Normal\", \"Creation\", \"Destruction\").</li><li>Creation of an animation to greet the player as soon as he is nearby.</li><li>AI that follows the player to steal 1 coin and leaves for a certain time before returning to chase the player.</li></ul><h4>Pause Menu</h4><ul><li>Menu that pauses the game.</li><li>Buttons to resume the game, to restart the game and to quit the game.</li></ul>",
+        teamSize: 3,
+        time: "1 week",
+        tools: "Unreal Engine 5 / C++ and Blueprint",
+        category: "game-programming",
+        image: "../img/over-drive-thumbnail.png",
+        photos: [
+            "../img/over-drive-thumbnail.png",
+            "../img/over-drive-1.png",
+            "../img/over-drive-2.png",
+            "../img/over-drive-3.png",
+            "../img/over-drive-4.png",
+            "../img/over-drive-5.png"
+        ],
+        link: "./project.html?id=over-drive",
+    },
+    {
         id: "foraine",
         title: "Dynamic Attraction Carnival",
         date: "2025",
