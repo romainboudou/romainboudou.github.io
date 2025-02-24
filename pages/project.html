@@ -67,47 +67,58 @@
         <script src="../data/projects.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const params = new URLSearchParams(window.location.search);
-        const projectId = params.get("id");
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get("id");
 
-        const project = projects.find(proj => proj.id === projectId);
+    const project = projects.find(proj => proj.id === projectId);
 
-        if (!project) {
-            document.querySelector("main").innerHTML = "<h2>Project not found</h2>";
-            return;
-        }
+    if (!project) {
+        document.querySelector("main").innerHTML = "<h2>Project not found</h2>";
+        return;
+    }
 
-        document.title = `Romain Boudou | ${project.title}`;
-        document.querySelector(".portfolio-top h2").textContent = project.title;
-        document.querySelector(".portfolio-top .content-placeholder img").src = project.image;
-        document.querySelector(".portfolio-top .content-placeholder img").alt = project.title;
+    document.title = `Romain Boudou | ${project.title}`;
+    document.querySelector(".portfolio-top h2").textContent = project.title;
+    document.querySelector(".portfolio-top .content-placeholder img").src = project.image;
+    document.querySelector(".portfolio-top .content-placeholder img").alt = project.title;
 
-        document.querySelector(".details-project .categorie:nth-child(1)").innerHTML = `
-            <h3>About</h3>
-            <p>${project.description || "No detailed description available."}</p>
+    document.querySelector(".details-project .categorie:nth-child(1)").innerHTML = `
+        <h3>About</h3>
+        <p>${project.description || "No detailed description available."}</p>
+    `;
+
+    let projectInfoHTML = `
+        <h3>Project Info</h3>
+        <ul>
+            <li><i class="fa-solid fa-people-group"></i> ${project.teamSize}</li>
+            <li><i class="fa-solid fa-clock"></i> ${project.time}</li>
+            <li><i class="fa-solid fa-screwdriver-wrench"></i> ${project.tools}</li>
+    `;
+
+    if (project.category !== "web-programming") {
+        projectInfoHTML += `
+            <li><i class="fa-solid fa-gamepad"></i> ${project.typeGame} </li>
+            <li><i class="fa-solid fa-video"></i> ${project.camera} </li>
         `;
+    }
 
-        document.querySelector(".details-project .categorie:nth-child(2)").innerHTML = `
-            <h3>Project Info</h3>
-            <ul>
-                <li><i class="fa-solid fa-people-group"></i> ${project.teamSize}</li>
-                <li><i class="fa-solid fa-clock"></i> ${project.time}</li>
-                <li><i class="fa-solid fa-screwdriver-wrench"></i> ${project.tools}</li>
-            </ul>
-        `;
+    projectInfoHTML += `</ul>`;
 
-        const descriptionSection = document.querySelector(".part");
-        descriptionSection.querySelector("p").innerHTML = project.detailedDescription || "No additional description available.";
+    document.querySelector(".details-project .categorie:nth-child(2)").innerHTML = projectInfoHTML;
 
-        const photosContainer = descriptionSection.querySelector(".photos-projets");
-        if (project.photos && project.photos.length > 0) {
-            photosContainer.innerHTML = project.photos
-                .map(photo => `<img src="${photo}" alt="Photo of ${project.title}">`)
-                .join("");
-        } else {
-            photosContainer.innerHTML = "<p>No photos available for this project.</p>";
-        }
-    });
+    const descriptionSection = document.querySelector(".part");
+    descriptionSection.querySelector("p").innerHTML = project.detailedDescription || "No additional description available.";
+
+    const photosContainer = descriptionSection.querySelector(".photos-projets");
+    if (project.photos && project.photos.length > 0) {
+        photosContainer.innerHTML = project.photos
+            .map(photo => `<img src="${photo}" alt="Photo of ${project.title}">`)
+            .join("");
+    } else {
+        photosContainer.innerHTML = "<p>No photos available for this project.</p>";
+    }
+});
+
 </script>
 
     </main>
