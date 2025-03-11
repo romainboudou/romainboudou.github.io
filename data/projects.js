@@ -103,5 +103,26 @@ const projects = [
         ],
         link: "./project.html?id=cherrybee-design",
     },
-
+    {
+        id: "quoridor",
+        title: "Quoridor",
+        date: "2023",
+        description: "Quoridor is a game based on the board game of the same name in PC version with additional features, developed in groups of 4 in 3 months.",
+        detailedDescription: "<p><strong>Quoridor</strong> is my response to a 3-month end-of-year project in Python using a graphics library (PyGame). In groups of 4 we had to redo the Quoridor board game on PC by adding a local mode and sound and theme settings. The game is played by 2, 4 or alone against AI on 4 different board sizes. The goal is to reach the opposite line first. We can place barriers to block and slow down the opponent.</p> <p><h4>Skills worked:</h4> <ul><li>Production of a game in PC version</li><li>Use of a pathfinding AI</li> <li>Play local multiplayer</li> <li>Use of a graphics library</li> <li>Creation of themes</li><li>Teamwork</li></ul></p>",
+        teamSize: 4,
+        time: "3 months",
+        tools: "Python / PyGame",
+        typeGame: "Strategy",
+        camera : "None",
+        category: "other-projects",
+        image: "../img/quoridor-thumbnail.png",
+        photos: [
+            "../img/quoridor-thumbnail.png",
+            "../img/quoridor-1.png",
+            "../img/quoridor-2.png",
+            "../img/quoridor-3.png",
+            "../img/quoridor-4.png"
+        ],
+        link: "./project.html?id=quoridor",
+    },
 ];

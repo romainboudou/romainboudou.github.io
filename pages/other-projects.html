@@ -28,13 +28,13 @@
     </header>
 
     <main>
-        <h2>Web Programming</h2>
+        <h2>Game Programming</h2>
         <p class="projects-intro">
-            Here is a selection of my most accomplished web programming projects.
+            This section includes other projects I've worked on, including prototypes, technical experiments, and unfinished games created for learning purposes or by myself.
         </p>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                const category = "web-programming"; 
+                const category = "other-projects"; 
                 const projectsContainer = document.createElement("div");
                 projectsContainer.id = "projects-container";
         
@@ -63,6 +63,10 @@
                                 <div class="water-mark">
                                     <i class="fa-solid fa-screwdriver-wrench"></i>
                                     ${project.tools}
+                                </div>
+                                <div class="game-style">
+                                    <i class="fa-solid fa-gamepad"></i>
+                                    ${project.typeGame}
                                 </div>
                             </div>
                             <h3 class="project-card-title">${project.title} (${project.date})</h3>
